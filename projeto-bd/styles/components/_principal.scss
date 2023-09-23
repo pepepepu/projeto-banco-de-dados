@@ -1,0 +1,165 @@
+@import '../abstract/variaveis';
+@import '../abstract/functions';
+
+.principal {
+    background-color: $white;
+    overflow: auto;
+
+    .bloco-01 {
+        @include estilo-secao;
+        flex-direction: column;
+
+        .bloco-01_titulo {
+            font-family: $fonte-titulo;
+            font-size: 90px;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+            .titulo-d01 {
+                color: $green;
+            }
+
+            .titulo-d02 {
+                color: $pink;
+            }
+
+            .titulo-d03 {
+                color: $blue;
+            }
+
+            .titulo-d04 {
+                color: $yellow;
+            }
+        }
+        .bloco-01_subtitulo {
+            font-family: $fonte-conteudo;
+            font-size: 15px;
+            padding: 0.2rem;
+            font-weight: 300;
+
+            .subtitulo_alt {
+                font-weight: 800;
+                background: $gradiente-01;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .bloco-02 {
+        @include estilo-secao;
+        height: 80vh;
+        background-color: $yellow;
+
+        .bloco-02_cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+            gap: 30px;
+
+            .bloco-02_card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: space-between;
+                padding: 2rem;
+                width: 250px;
+                height: 200px;
+                gap: 20px;
+                background-color: $light-yellow;
+                border: none;
+                border-radius: 40px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+                .bloco-02_cards_txt {
+                    height: 40%;
+                    font-family: $fonte-titulo;
+                    text-align: left;
+                    font-size: 25px
+                }
+
+                .material-symbols-rounded {
+                    color: $yellow;
+                    font-size: 70px;
+                    text-align: right;
+                    font-variation-settings: 
+                    'FILL'1,
+                    'wght'400,
+                    'GRAD'0,
+                    'opsz'24;
+                    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+
+    .bloco-03 {
+        @include estilo-secao;
+
+        .bloco-03_titulo {
+            font-family: $fonte-conteudo;
+            font-size: 35px;
+            width: 80%;
+            padding: 1rem 1rem 0.5rem 1rem;
+
+            .titulo_destaque {
+                background: $gradiente-01;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .bloco-03_botoes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 1rem;
+            gap: 20px;
+
+            .bloco-03_botao01 {
+                @include estilo-botao;
+                background-color: $green;
+                color: $black;
+            }
+
+            .bloco-03_botao02 {
+                @include estilo-botao;
+                color: $black;
+                background-color: $pink;
+            }
+            
+            .bloco-03_botao03 {
+                @include estilo-botao;
+                color: $white;
+                background-color: $blue;
+            }
+        }
+
+        .bloco-03_botao01:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .bloco-03_botao02:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .bloco-03_botao03:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .bloco-03_texto-info {
+            font-family: $fonte-conteudo;
+            font-size: 10px;
+            padding: 0.5rem;
+
+            .info-destaque {
+                font-weight: 800;
+                color: $green;
+            }
+        }
+    }
+}
